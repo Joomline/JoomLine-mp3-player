@@ -1,0 +1,590 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: Light
+ *
+ * Copyright (c) 2010 Happyworm Ltd & Per Sandström
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Per Sandström – http://www.helloper.com
+ * Skin Version: 1.0 (jPlayer 2.0.0)
+ * Date: 20th March 2011
+ */
+ 
+  
+.skin_skin-light .openNewWindow{padding:7px 10px;text-align:center;border-bottom: 1px solid #ccc;background-color:#ddd;}
+.skin_skin-light .openNewWindow a{color:#666;}
+.skin_skin-light .openNewWindow a:hover{color: #0D88C1 !important;}
+.skin_skin-light .jp-nowplay{padding:5px 10px 10px;font-weight:bold;color:#666;border-bottom:0 none;background-color:#ddd;}
+.skin_skin-light .jp-shuffle,.jp-repeat{display:none !important;}
+.skin_skin-light .showhide_playlist{padding:7px 10px;text-align:center;border-bottom:1px #ccc solid;color:#666;cursor:pointer;}
+
+
+.skin_skin-light div.jp-audio,
+.skin_skin-light div.jp-video {
+	/* Edit the font-size to counteract inherited font sizing.
+	 * Eg. 1.25em = 1 / 0.8em
+	 */
+	color: #666 !important;
+	font-size: 1em !important; /* No parent CSS that can effect the size in these demos */
+	font-family: 'Helvetica Neue', sans-serif !important;
+	line-height: 1.6 !important;
+	-ms-text-size-adjust:none;
+	-webkit-text-size-adjust:none;
+}
+
+.skin_skin-light div.jp-audio ul{
+	list-style:none !important;
+	margin:0 !important;
+	padding:0  !important;
+}
+
+.skin_skin-light div.jp-audio {
+	margin-top:-5px;
+}
+
+.skin_skin-light div.jp-video-270p {
+	width: 480px;
+}
+
+.skin_skin-light div.jp-video-360p {
+	width: 640px;
+}
+
+.skin_skin-light div.jp-interface {
+  background: #DDD;
+  background: -moz-linear-gradient(top, #DDD, #BBB);
+	background: -o-linear-gradient(top, #DDD, #BBB);
+	background: -webkit-gradient(linear, left top, left bottom, from(#DDD), to(#BBB));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#BBBBBB');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#DDDDDD, endColorstr=#BBBBBB)";
+  border: 1px solid #BBB;
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+	position: relative;
+	width: 100%;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single div.jp-interface {
+	border-bottom: none;
+	height: 80px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist div.jp-interface {
+	height: 80px;
+}
+
+.skin_skin-light div.jp-video div.jp-type-single div.jp-interface {
+	border-bottom: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	height: 60px;
+}
+
+.skin_skin-light div.jp-video div.jp-type-playlist div.jp-interface {
+  -moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	height:60px;
+}
+
+.skin_skin-light div.jp-interface ul.jp-controls {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skin_skin-light div.jp-interface ul.jp-controls li {
+	display: inline;
+}
+
+.skin_skin-light div.jp-interface ul.jp-controls a {
+	overflow: hidden;
+	position: absolute;
+	text-indent:-9999px;
+}
+
+.skin_skin-light a.jp-play,
+.skin_skin-light a.jp-pause {
+	height: 40px;
+	width: 40px;
+	z-index: 1;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single a.jp-play,
+.skin_skin-light div.jp-audio div.jp-type-single a.jp-pause {
+	left: 40px;
+	top: 20px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-play,
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-pause {
+	left: 48px;
+	top: 20px;
+}
+
+.skin_skin-light div.jp-video a.jp-play,
+.skin_skin-light div.jp-video a.jp-pause {
+	top: 15px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-single a.jp-play,
+.skin_skin-light div.jp-video-270p div.jp-type-single a.jp-pause {
+	left: 195px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-play,
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-pause {
+	left: 200px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-single a.jp-play,
+.skin_skin-light div.jp-video-360p div.jp-type-single a.jp-pause {
+	left: 275px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-play,
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-pause {
+	left: 300px;
+}
+
+.skin_skin-light a.jp-play {
+	background: url(jplayer.light.png) 0 0 no-repeat !important;
+}
+
+.skin_skin-light a.jp-play:hover {
+	background: url(jplayer.light.png) -41px 0 no-repeat !important;
+}
+
+.skin_skin-light a.jp-pause {
+	background: url(jplayer.light.png) 0 -42px no-repeat !important;
+	display: none;
+}
+
+.skin_skin-light a.jp-pause:hover {
+	background: url(jplayer.light.png) -41px -42px no-repeat !important;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single a.jp-stop {
+	left: 90px;
+	top: 26px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-stop {
+	left: 125px;
+	top: 26px;
+}
+
+.skin_skin-light div.jp-video a.jp-stop {
+	top: 21px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-single a.jp-stop {
+	left: 245px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-stop {
+	left: 278px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-single a.jp-stop {
+	left: 325px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-stop {
+	left: 378px;
+}
+
+.skin_skin-light a.jp-stop {
+	background: url(jplayer.light.png) 0 -83px no-repeat !important;
+	height: 28px;
+	width: 28px;
+	z-index: 1;
+}
+
+.skin_skin-light a.jp-stop:hover {
+	background: url(jplayer.light.png) -29px -83px no-repeat !important;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-previous {
+	left: 20px;
+	top: 26px;
+}
+
+.skin_skin-light div.jp-video div.jp-type-playlist a.jp-previous {
+	top: 21px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-previous {
+	left: 172px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-previous {
+	left: 272px;
+}
+
+.skin_skin-light a.jp-previous {
+	background: url(jplayer.light.png) 0 -112px no-repeat !important;
+	height: 28px;
+	width: 28px;
+}
+
+.skin_skin-light a.jp-previous:hover {
+	background: url(jplayer.light.png) -29px -112px no-repeat !important;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-next {
+	left: 88px;
+	top:26px;
+}
+
+.skin_skin-light div.jp-video div.jp-type-playlist a.jp-next {
+	top: 21px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-next {
+	left: 240px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-next {
+	left: 340px;
+}
+
+.skin_skin-light a.jp-next {
+	background: url(jplayer.light.png) 0 -141px no-repeat !important;
+	height: 28px;
+	width: 28px;
+}
+
+.skin_skin-light a.jp-next:hover {
+	background: url(jplayer.light.png) -29px -141px no-repeat !important;
+}
+
+.skin_skin-light div.jp-progress {
+	overflow: hidden;
+	position: absolute;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single div.jp-progress {
+	height: 15px;
+	left: 130px;
+	top: 32px;
+	width: 122px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist div.jp-progress {
+  background: url(jplayer.light.png) repeat-x scroll 0 -202px transparent !important;
+	height: 15px;
+	left: 164px;
+	top: 32px;
+	width: 122px;	
+}
+
+.skin_skin-light div.jp-video div.jp-progress {
+	left:0px;
+	height: 10px;
+	top:0px;
+	width: 100%;
+}
+
+.skin_skin-light div.jp-seek-bar {
+	background: url(jplayer.light.png) 0 -202px repeat-x !important;
+	cursor: pointer;
+	height:100%;
+	width:0px;
+}
+
+.skin_skin-light div.jp-video div.jp-seek-bar {
+  background-position: 0 -204px;
+}
+
+.skin_skin-light div.jp-play-bar {
+	background: url(jplayer.light.png) 0 -218px repeat-x !important;
+	height: 100%;
+	width: 0px;
+}
+
+/* The seeking class is added/removed inside jPlayer */
+.skin_skin-light div.jp-seeking-bg {
+	background: url(jplayer.light.pbar-ani.gif) !important;
+}
+
+.skin_skin-light a.jp-mute,
+.skin_skin-light a.jp-unmute {
+	height: 15px;
+	width: 18px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single a.jp-mute,
+.skin_skin-light div.jp-audio div.jp-type-single a.jp-unmute {
+	left: 274px;
+	top: 32px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-mute,
+.skin_skin-light div.jp-audio div.jp-type-playlist a.jp-unmute {
+	left: 296px;
+	top: 32px;
+}
+
+.skin_skin-light div.jp-video a.jp-mute,
+.skin_skin-light div.jp-video a.jp-unmute {
+	top: 27px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-single a.jp-mute,
+.skin_skin-light div.jp-video-270p div.jp-type-single a.jp-unmute {
+	left: 304px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-unmute,
+.skin_skin-light div.jp-video-270p div.jp-type-playlist a.jp-mute {
+	left: 357px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-single a.jp-mute,
+.skin_skin-light div.jp-video-360p div.jp-type-single a.jp-unmute {
+	left: 384px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-mute,
+.skin_skin-light div.jp-video-360p div.jp-type-playlist a.jp-unmute {
+	left: 443px;
+}
+
+.skin_skin-light a.jp-mute {
+	background: url(jplayer.light.png) 0 -186px no-repeat !important;
+}
+
+.skin_skin-light a.jp-mute:hover {
+	background: url(jplayer.light.png) -19px -170px no-repeat !important;
+}
+
+.skin_skin-light a.jp-unmute {
+	background: url(jplayer.light.png) 0 -170px no-repeat !important;
+	display: none;
+}
+
+.skin_skin-light a.jp-unmute:hover {
+	background: url(jplayer.light.png) -19px -186px no-repeat !important;
+}
+
+.skin_skin-light div.jp-volume-bar {
+	background: url(jplayer.light.png) 0 -250px repeat-x !important;
+	cursor: pointer;
+	height: 5px;
+	overflow: hidden;
+	position: absolute;
+	width: 72px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single div.jp-volume-bar {
+	left: 302px;
+	top: 37px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist div.jp-volume-bar {
+	left: 324px;
+	top: 37px;
+}
+
+.skin_skin-light div.jp-video div.jp-volume-bar {
+	top: 32px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-single div.jp-volume-bar {
+	left: 332px;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-type-playlist div.jp-volume-bar {
+	left: 385px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-single div.jp-volume-bar {
+	left: 412px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-type-playlist div.jp-volume-bar {
+	left: 471px;
+}
+
+.skin_skin-light div.jp-volume-bar-value {
+	background: url(jplayer.light.png) 0 -256px repeat-x !important;
+	height: 5px;
+	width: 0px;
+}
+
+.skin_skin-light div.jp-current-time,
+.skin_skin-light div.jp-duration {
+	font-size: .64em;
+	position: absolute;
+	text-shadow: 0 1px 1px #FFF;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .8);
+}
+
+.skin_skin-light div.jp-duration {
+	text-align: right;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-single div.jp-current-time,
+.skin_skin-light div.jp-audio div.jp-type-single div.jp-duration {
+	left: 130px;
+	top: 49px;
+	width: 122px;
+}
+
+.skin_skin-light div.jp-audio div.jp-type-playlist div.jp-current-time,
+.skin_skin-light div.jp-audio div.jp-type-playlist div.jp-duration {
+	left: 164px;
+	top: 49px;
+	width: 122px;
+}
+
+.skin_skin-light div.jp-video div.jp-current-time,
+.skin_skin-light div.jp-video div.jp-duration {
+	left: 0px;
+	padding: 0 1%;
+	top: 10px;
+	width: 98%;
+}
+
+.skin_skin-light div.jp-playlist {
+	background: #FFF;
+	border: 1px solid #DDD;
+	border-top: none;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	width:100%;
+}
+
+.skin_skin-light div.jp-playlist ul {
+	font-size: 1em !important;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skin_skin-light div.jp-type-single div.jp-playlist li {
+  background: #FFF;
+  background: -moz-linear-gradient(top, #FFF, #EEE);
+	background: -o-linear-gradient(top, #FFF, #EEE);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#EEEEEE)";
+	padding:5px 0 5px 10px !important;
+	font-weight:bold;
+	text-shadow: 0 1px 1px #FFF;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .8);
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist li {
+  background: #FFF;
+  background: -moz-linear-gradient(top, #FFF, #EEE);
+	background: -o-linear-gradient(top, #FFF, #EEE);
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EEE));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EEEEEE');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#EEEEEE)";
+	padding:5px 0 4px 10px !important;
+	text-shadow: 0 1px 1px #FFF;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, .8);
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist li:nth-child(even),
+.skin_skin-light div.jp-type-single div.jp-playlist li:nth-child(even) {
+  border: 1px solid #DDD;
+  border-left: 0;
+  border-right: 0;
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist li:last-child,
+.skin_skin-light div.jp-type-single div.jp-playlist li:last-child {
+  border-bottom: 0;
+  -moz-border-radius: 0 0 6px 6px;
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist li.jp-playlist-last {
+	border-bottom: none;
+	padding: 5px 0 5px 10px;
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+  font-weight: bold;
+	list-style: none;
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist a {
+	color: #666;
+	text-decoration: none;
+	float:left
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist a:hover {
+	color: #0D88C1 !important;
+	background:none !important;
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist a.jp-playlist-current {
+	color: #0D88C1;
+}
+
+.skin_skin-light div.jp-type-playlist div.jp-playlist div.jp-free-media {
+	display: inline;
+	margin-left: 20px !important;
+}
+
+.skin_skin-light div.jp-video div.jp-video-play {
+	background: transparent url(jplayer.light.video.play.png) no-repeat center !important;
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+}
+
+.skin_skin-light div.jp-video div.jp-video-play:hover {
+	background: transparent url(jplayer.light.video.play.hover.png) no-repeat center !important;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-video-play {
+	height: 270px;
+	top: -270px;
+	width: 480px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-video-play {
+	height: 360px;
+	top: -360px;
+	width: 640px;
+}
+
+.skin_skin-light div.jp-jplayer {
+	height: 0px;
+	width: 0px;
+}
+
+.skin_skin-light div.jp-video div.jp-jplayer {
+	border: 1px solid #DDD;
+	border-bottom: none;
+	z-index: 1;
+}
+
+.skin_skin-light div.jp-video-270p div.jp-jplayer {
+	height: 270px;
+	width: 480px;
+}
+
+.skin_skin-light div.jp-video-360p div.jp-jplayer {
+	height: 360px;
+	width: 640px;
+}
+
+.skin_skin-light div.jp-jplayer {
+	background-color: #000;
+}
+.skin_skin-light .jp-playlist div{overflow:hidden;padding-right:10px;}
+.skin_skin-light .jp-free-media{float:right;}
+.skin_skin-light .jp-free-media a{float:none !important;}

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>JoomLine mp3 player v2</name>
+    <creationDate>2014-01-22</creationDate>
+    <author>JoomLine</author>
+    <authorEmail>sale@joomline.ru</authorEmail>
+    <authorUrl>http://www.joomline.net</authorUrl>
+    <copyright>Copyright 2010 JoomLine.net All rights reserved!</copyright>
+    <license>http://joomline.net/licenzija-joomline.html Licenses JoomLine</license>
+    <version>3.6.1</version>
+    <description>
+        <![CDATA[
+			<style type="text/css">
+				.readonly.mod-desc{margin:12px 0;padding:20px 0;border-top:1px #eee solid;border-bottom:1px #eee solid;overflow:hidden;}
+				#module-sliders{font:14px/18px "Trebuchet MS",Arial,Helvetica,sans-serif;color:#6D6D6D;}
+				#module-sliders h3{padding:10px;background-color:#E7E7E7;font-size:14px;}
+				#module-sliders h3 a{color:#000;}
+				#module-sliders .pane-toggler span,#module-sliders .pane-toggler-down span{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAoCAYAAAD32nqhAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAEFSURBVEiJ7ZYxCsJAEEXfiniEYJHDWFlaeoQQESy8iyheRNCDpLBJYeEZRFyLJLJuJuvIIgg6sEUmf94Ok53sGGstMdb3HcYY93FYa06No7WhtfZpecEFcATSTn0HoAm29XpANAA/+Ani63tCXaZAKfjL+p2qBhMhg6mklzJ4yz4GuMQC9sA2BnADZhpIqAYNZBMCtHpBgMyDikAvuNYDEklvYtv5ew/SH/BbgK5eSLrg2n/iCFhpMgwJcg3k1Q45sA7pNEXMQhDtV8iAcQwAYBALEO0jB2kJHGhfrjtgoZkPUqpZwAcUwFA7ofiQgmrwUI84LuQRLAFa94I3paXAFTi7ANfutlwydQ3ol/AAAAAASUVORK5CYII=') no-repeat 0 -24px;padding-left:17px;}
+				#module-sliders .pane-toggler-down span{background-position:0 1px;}
+				#module-sliders .adminformlist li:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0;}#module-sliders .adminformlist li{display:inline-block;}* html #module-sliders .adminformlist li{height:1%;}
+				#module-sliders .adminformlist li{display:block;padding:5px 0 10px;margin-bottom:5px;border-bottom:1px #eee solid;}s
+				#module-sliders label{min-height:30px;margin:0;line-height:30px;color:#343434;}
+				#module-sliders .jform_params_plvisible label{color:#333;}
+				#module-sliders input[type=text],#module-sliders textarea,#module-sliders select{height:30px;width:200px;margin:0;line-height:30px;padding:0 5px;color:#666;border:1px #E1E1E1 solid;font-size:15px;background-color:#D5EEFF;}
+				#module-sliders select{height:34px;line-height:34px;width:213px;padding:5px;}
+				#module-sliders textarea{min-height:150px;width:98%;padding:5px;}
+				#module-sliders .radio{margin:0;}
+				#module-sliders input[type=radio]{position:relative;top:3px;}
+				#module-sliders #jform_params_playlist-lbl{float:none;display:block;}
+				#module-sliders #jform_params_playlist{height:260px;overflow:hidden;width:100%;padding:0;border:1px #eee solid;-moz-box-sizing:border-box;box-sizing: border-box;}
+				#module-sliders #jform_params_playlist ul{height:222px;overflow:auto;margin-top:3px;border-bottom:1px #eee solid;}
+				#module-sliders #jform_params_playlist li{height:35px;line-height:35px;margin:0 3px;padding:0 10px;background:#D5EEFF;border:0 none;}
+				#module-sliders #jform_params_playlist li:nth-child(2n){background:#fff;}
+				#module-sliders #jform_params_playlist label{height:35px;max-width:100%;width:100%;line-height:35px;display:block;float:none;margin:0;padding:0;cursor:pointer;font-size:12px;}
+				#module-sliders #jform_params_playlist input{margin:11px 8px 0 0;}
+				#add_playlist{height:30px;display:inline-block;margin:0 0 0 10px;line-height:30px;padding:0 10px;border:1px #ccc solid;text-decoration:none;font-weight:bold;color:#6D6D6D;}
+				#add_playlist:hover{background:#D5EEFF;}
+				.sellinks{float:right;margin:6px 15px 0 0;}
+				.select_check{display:inline-block;color:#0B55C4;cursor:pointer;}	
+				#jform_params_playlist .error{text-align:center;margin-top:108px;font-size:18px;color:red;}
+			</style>
+			<script type="text/javascript">
+			function checkAll(formname, checktoggle) {
+				var checkboxes = new Array();
+				checkboxes = document[formname].getElementsByTagName('input');
+				for (var i = 0; i < checkboxes.length; i++) {
+					if (checkboxes[i].type === 'checkbox') {
+						checkboxes[i].checked = checktoggle;
+					}
+				}
+			}
+			</script>
+			<div id="admin_info">
+            <p>Version - New Version</p>
+            <p>Show mp3 player that scan selected directory for mp3 files</p>
+            <p><a target="_blank" href="http://joomline.net/licenzija-joomline.html">Licenses JoomLine</a></p>
+            <p><a target="_blank" href="mailto:sale@joomline.ru">Support</a></p>
+            <p><a target="_blank" href="http://www.joomline.net"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATUAAABSCAYAAAA1mUNSAAAlhElEQVR42u2dCVgUR9rH23DPDHMwqERNQORUQYUoJjG6UbKrSTQaYYMXl9z3pXgAIiqCiNzHcMitiKioMVHBqDExup+JSTZPkt1Ec23yYZIluut+YXNYX1VPjzZjV083DDhgv3n+T3Cm663qeqt/U0d3F0E8QEs7//0jq+ovjHuu6PR0z+yjRoRgggkm2HCzRbXnJS9WdM1bUtG5bEHhycZn8l/rdss68t+x61rEQu0IJphgw8K8S7rsvItPJ/6p+GTxH/Jfu+iVcxy4bzsCnDLawYQNrcAqqfFni6hqkVBTggkmmMFZ0vH3jRMPXpY8vfu1Z5/MP6mw39zmNGNHx7ee2R3AeUs7sN3UCmzW7QPKpGaggFImN4PRyU29YxP2Cj01wQTjayt2xBB+2TehAKkVO9KFStGDLa488/gyVdfs50tPBzxb8PrZZ/JfvTVt2+E7TlvanGWxNa5jUprA6BQEsCZS1ghkKTQlN/aOjq8d/lBbkf0lsWInYNTKHY5CSxkhhmKJi/OK7LqhK0d2OqatFQhB6ofNyT/57KLS00l/LDpZCiH25aycDjikPAQc0tvAo6ktsCfWABRxtc5jkuqcILT6QixlZELNImB3N66xe6Q1uAmtZmQYGUtMnG2iSjuGqhyPrMq5hYWrX5ZSiBQPs05qNnfd2n5z+nY0L9YGHtu4H4xJQcPJJjg/hnpiTYAEWWKdM6mHBmr53cTKHMAkj3QBaiMGaiiWmDgPJdRwZUCyXLt7sRApHjYmca94TErjHQQkBDHMkPLhg1rgnm5iVS5gkkdGowC1kQI1FEtMnG2iy4YMaib+ebdx5cg6fMFZiBQPQwAiQcQOqocPakEF3cTqXYBJHluaBKiNFKihWGLibBNTPmRQezJrXyNTGWakNRwFAJgIkeIDtTgItSQIInLlEqMkCLIECDQk9Df7sb3I57CH2tqibmLNbsAkj8wWAWojBWoolpg428RWDhnUILgcni84UmkStOe2Jv9nstua4eeuQpR4mjUEkDUEERpyYgVBZg2BRgr9zX5sr/VIgFpIcTfhnw+Y5LFVgNqIgRqKJSbONnGqjqEsCwSYLdRCqMWUHIQIGQLUEkcI1EJLuomAAsAkj6x9AtRGCtRQLDFxtomv6hBqaFhCrQZCraHXOlm90skoeEuHdcJeZ1Lob2oxQS36cQh+9b3WsdXDH2phpd1EYCFgksc2AWojBmoolpg42yRUC1B7uKDWqIZYUj3snVFKqAPWsTW91lHlwx9qEeXdRHAxYJLH9lYBaiMFaiiWmDjbJNYIUBv5UKujoNao/owCmTKuFlhHq4B1ZClQhhf9pgzePfyhFlnZTawtAUzy2CFAbcRADcUSE2ebpFoBaiMbahBocTXO1omwN4YUD0EWVQGsgvOAYlUWUPw5Dch9UoHcd+N/5X7pwx9qUVXdRGgZYJLHzrb+Qy2seBERVpJOhJaeY/YPb/hE36Pj9GmDmW9YcQyjT+QPX473+xwbUnZTnX+Rl8781uYrGX2QKikgy8MVaiiWmDjbpNQNHdRCi1epz19bLOeC6pKx7CV1rHmgusbFX9/nE1r6JbZt6DO/PlCL3i+yToRQQ08P4JSo7qmNjqt2gmADyogSYOWfDSz+nNZDLFlXRyyMX0h4R84n5oU9RTwX6zkSYC+Kru4eFVoOmOSZc5A31EaFl6XDtDdxPhkVVvblqPCSmIGcx1Dk65jeksHkRxFf03mvHCWLoN/3uZWB+abXUSF7lKPCSut4nINOQKNY4nw8uq5+yKAmi6s6wFQGUUzVO7g0U7a2+DGlEUdXf9qnztRtgHv8B9Dm+tfeYEzDiwf+PLW8Qz5RWi9JlxW5zVLG7/tJiZ4mwCmhASgTG53g0HKyVdAuIH4l/Wti8Y5V8QvnTPppicwN+BDxwNe0Ffiavw58LU4CH8VxqBAo++EKNUlMbbdRuAow6Yncds5QM4os9TKKqPwS54uTIireh354BX0o83Xesj+DKb00rvZvRmGFSqPw8o7+5N3nfCLKYvp3DqWr2MqOYolLOz61ccighvJiKgOcs34Pl2bq1v1+TGlMo1T/VtdZeUG/Yx9Zkc6zvTmS7WVA7a2sfzBVdCqmKl5TNMoPy4G03hLI8l3mKeMO3GCHGhpyNrrKfTa4mL2ytYvwqBCDpUZ/Asul7wAfOYDwYlMj1JPDDWqWsXu7jSOqAJNm7jrECWrGkWWLcD74yiRSdcs4qszLEPN1ztyfgfehutnv/CMrCozDi5TGEZXn+l3+qCpUfiyYUSxxaSdsaBoyqKG8mMowOrkBCzW3rFY/fcWZuf7LVnFqb7B9kO1EH3lGVfIbkipOK1YqTiluQKgB+REItb0Qankuc5Vxrd8r4UomVmj+LLryCeIPUcbVL3pZ/3uxWPXzMjn4nR1mdP0MFT2coCaNq+s2jqwGTJqVd1gn1Eyiyr1w6fsr06jqr40jipWGlq/L1tYMfeepkUlk1c2B+oBDuCZc2VEscekmbGweOqjBvJjKAJ/LxkLNfRuE2iDVO5JZdPU3HNq5I/nDodeYl6/iCrQMqDtQgIQa6qnVQqjt5gA1OI9mnHDYDcD580+9Ree6F8sBT6hplDNcoCaLr+82iaoBTPLKO6ITambRNV/j0g9E5jFVDYaWr+vWAxmDkadeFVnCCGUUS1yaxza1DBnUUF5MZRi7rgkLtWnbD/gNdr2ZRlWwAsYituaYvvM0i6m9hYsXHWh+JMyQTvUDarHVgFh/yel3N8L5qrcUfN9/qCEFDAeoyRMbus1i9gImeeV3sELNPLY6BpdWo/lFrzXv6no/hfZIzOKlVZ2VjlsOXtKV1iy20tGQ8p2y/WCGzrRQY9Y3X0f50/NOOHQp8/HN+z/ikl4j9x2Hu1A6jY/3vv5h5axdHUfZ0sgSa/0ZoQZjiUtju3nfkEEN5cVUBpvUFizUZuw46Me1zlAdo7pHdaWpt9Yr18J11Zsypf4k9gc0tmoRW1pJfP1t7TyR0Ge6Yi6Jr81kA9okqB/vQu0k1AkItUMU1DTDz8RGgBWCWupFJ+BOOL8/cKj1QLkYOtQUSY3d5rF1gEmz9xxlhZossf5jXNqxqS3XW9+9Ho6e64OS0dNRz/55JsIL1jKh4TbOhyKpLsuQ8p26oz0DlwbJKrn5RkDTm7thHnO1n2eE/x4NNRuVj80H0uNprR9R5+CO0tF8mKAHvxcUv96MSztuQ3MVU9lRLHFp7NL2DxnUUF5MZXh0AwvUstv9dNWZe/aRrl1nPkA/YrOp2JvQ6k2E6g3FBpdeltj4HfbOiZSG/bh0Tpntl6jnWB203zJCfTabLV7ShPpv2aCWcxdo2j01zZxabOsNdqjVQKi943yHgtoPA4MaUqGhQw1eiN0WcfWASU8WHMNCzSKmXIlLJ01svP329e4XUWNiyxtdsKsbz+fi/Izd0NJpKPmSUMtuz8ClWVByEvXMFkCNY8vbp6ZzG84H0rLqM5XUhSliKb8DOlem9I9ubDnDlAbFEpfnxPTWIYMayou53PuwUPPYecgPV3bb9AMf5alh5q79I8ZQb+PQ8Thf2DsEEhr+xXS8MqXlBvqR1HXOKF7Tsju6sHGPr/ZiApod1Hd9oKaZUztCrX7muczXCTX4xACx8Yrzb+4sw8+XRW+DF4nt4CWiCP77mg6o/Qg1aSRCbfT6hsW4dM8Wnmjk+m4stoYmT2r+zlDy1QU1rm+aKDr7wRQdQLPldM9cZvtFRjhs2PfuwwS18guf+OqCWd8Fk6NVeLhU3TftgD7DHT+34NV6rvnGtF1cha3/tJZQJqh53Qe0U+ohqPyYHMj2WV6S5rvaKuOabikT0b1oGMXvBcTm95x/w82pvSzLIDqB5ZTcE6utt766GPiIFPBWj3M6wDbHkKEGf226RXENgElPFRzHQs0j55AfLp1/0/nlfMrglXesCufLUPIlby3YeSiDz/EYmJrgfDhtbdvD1Y/DlrZjTD7GbdrPCAcUS1y+9hkHhgxqKC8+5dYVc7Y2yuzryFY+vmzTWpbijn++4mQw13wTD741EefHZXv7Ziao+dwHtXtD0G/knaYTyAs4vua/SvgcJxZq8D41IuOqM1oo0Myp/R+E2m/LIZz+LI4kfQTlfTw1vghMjMgjGzJYZgbBpvicBWqhIxFqk7Yc2IBLhwKor4ZmKPnqC2rIsI0762DhYMFBgJra5hcdD+Tjiy1v9J0+fsxQu2KCWjoj1NRgO0RevKEFImWMqheBCws2GtRQT+0GBTXgJwuNJVzER+2mWRK+aYUy9Ozniozflf755LzHHR/FgTt4qBn01l/W6/Z1i+MbAZOeLsQ3GPedhzNw6fi+lpnNl6Hk25/jcYbz4bqtnTPUJm1p62DyMX5zKyMcUCxx+SJfQ9Xe+JYbmWfuYb/+tFF9+GI7Xl9C7YoJauuxUDutIAOmeKHFwiqyrNcKzpspE+rVj0RpKx5CLf2q8x03wpGE2osIaJLV6ZauY084OV9/19XlMhy9S4jlqdtkPuuAaMV2ciwPe3Jtv8Pe3J1heM/aYECNbxn0BbXBzFeAmgC1oYba8yxQ+0HxhuU0dJw8KBfII0qBVWwtsIIAs4Ig66M4BLUPnX6ZQbih4WfPy9I1c4mnrI47On329uTJ4BM3N3DD3e08mDTe0sg3LZVYWmt6e6ls6r+Xyr/rfRkOU19mBNsaQ4aahf+u7rs7ZWvJI60e22AcEyszcOn4loGPrweVr17zxviwiy3jDDWbyJIOJh9WIXsY4UDGEpMv6WuIjG+5kU1JqfLrTxvVhy+24/Ulsl0xQO0JFqgBRaf8fdklYrRk4bZiOXp9UB+w1d8T7MU9knxyyu8ehNOV50QJMcQc5QkKaB+7u4Ovp00D302fDm7OmH4WOCwyR3l/tlD27ncvysBPS9RD1V9Rj61vr+0pg4ZaPzczdkxUZWA3peUNF+6+HlS+es0b48Mutpw71NBenQw+rEILMFAzjM2M+ZabBMu6aj99bbjN1xfb8foS2a4YoDYW6mNWsJ2RnrWosRoj+WNGmWxVJlCEI7DVQLDtvQc1+G9pVMVM5POQneukMy6un/yF6qF9BYHWDYH2w4wZ4J8eHuBfMzw6/zHd3frCAtEu1Kv7YpEM/ADBBntt4BfYY0PDUQi0L6HGGzbU8JsZL8tvm4AFQlJVBnZjWr5w4eHrQeWr17wxPuziKvhBjcGHVVgRM9QMZDNjvuUmwbIegkVPG27z9cV2vL5EtismY10soGR1VnLBok1kJX4uvVC2IlPdY4urvgc29ERBcit69tP0ypQpH384dSr4jOqhkUCDMPsRqofSTQ/PN79xWmR5Yp5FzjvzpeDTP8nAd3Ae7uZL6FYQBfj1ZcUOwtANs7EsEtvEu2NydQY2LV+48PD1oPLVa94YH3bxldyhhjYgZvBhFVbMDDUD2cyYb7lJsKTW+Olrw22+vtiOb7n4STj9sagByBYHNQXU31jBdsoK9tgs3zQ/RkjF89NzpCTYSoACPsiuiK8HiphqYBlT4wlb6KjvXJ3jv4IgQ8PNG7B3hoD2TxrQaGA7//mkeZZtT5vtODtPAv76nBR8/YIM/LhE/sV/lsnGGjTQ1uR44Ta4NQnYfZsVCCm1Gbi0xMrtSl5wYfNlIPn253isYXzYJai4Qw1tQMzgwyq8hBlqBrKZMd9yk2DZUOunrw23+frSZ979MgiuP0L9xnJ7h/qZ0C7JafOzhKXIO32rdGUGXDyAYINzbIroKiAPL53hsalcZrH7rDNwtA34EQGNGnL2YHTL44nTnzp7yRpmm207/YwleHeBFFxfJFtm6J00cWhRGW6DW1l46TW2tNPSGuNxaa0iS57mU47HElR7cL4MJV8Sauv3ZvA5Hv9jwuzDLqmKO9TQBsRMdRBRxgw1A9nMmG+5SbBsrPPT14bbfH2xHW+XrJo3JJUG4RXFCjUN2M5Ynh0DCJGFd3qWdMUWBDMINRUwD610cksun+WSUPoPovjCaOAyyb+HBWg0sL3x+ZQ/yBtmW2x7fY7lJoMfdvrnKI2CC/6F2wty8saGNtal8a3Nq3FpldFl6/gURRJRepnJjyi05Iah5EtCLbUuA5c3r7rH+LBLruEONbRXJ4MPq6gKZqgZyL6ffMtNgmVzvZ++9qbl62vOjtaFuOOlkSVDN71k9YY4ln0YSqlL+pbkDmEuWrAlTboyE8jDioE8psbJxD/PcVxkMXBNKP2M2P9vJZjqHMIFbHAoehE4+4uG7ESD93gRwfn9euf5qODC80RQEcBpUeHRMLb0PpWvzcKlNQkp/gfnggTlr8L5sY6r+sBQ8iWhtrEhA1tnfAzjw27dXu5QQ9vaMfiwiqlkhtr2/W64fIdyizy+5SZBlN7ohys7eV58oMbTV3RT10SW9vYtEbhLye+aLYjhnYaY1ygmbK6KrN8ZFQ5v5QA64dZl2WUOCDPRc1vXS1dnAXnwLjdJRLmTPKwIPB5VDJwSSv9GNH0zGjhPDPqJA9jgMRdue8y0HooG8khIydfqbc6KuD+1EFLgSKwtPofbLo3aMu0j+itvmAy9RUIUWXkD76dI94USUrjokdDSWzgf07JaqwwlXxJqmxszsPnyMYwPu9Q67lBD29ox+LCKq2KGmoFskce33CSIMpr99LWNI19faLFMHlt9HZdmVEgx7BzkKflcd2Qa7nMVTUZE0L5Owk/1FeHU+bj1u0SQzt7a6+j/lp0KQFiIl+zMlixPnQIfp5osjyiDQ9IS8HhkEXCNK/6MyDk8HjjZ+nMBG1QXlPmgtg5yWy6GLcPQ52hrNcbj4feYbdLoWrn3dCKXIszKaa9n9XVvO7i+vUlyqzm4tK+jHOsOXVxgSPk6pjVnYNPxMYwPu40N3KGGtrVj8GGVUMMMNQPZIo9vuUkQZUIQ6Wkbx/748shuq9V53TBte4jan3r7vA7O2/vdZ7Gd2UTEMUAEtgDilYprhOSTx5QXjcKwQEOvJjohB/IOqHbpBUnTYwrkRhZSMFMGoSaLqgRSOCSdEFUEXOKLrxOFlyaAyU6hPdzAVjRYDQPtaIM2gBjQjjYYeWa3H9XVS9NY06VPZppFV90exHKIDClf3G5SSLzih/Fhv6mZM9T47srEtpvUoCii8kt9lBsZbjcpvjue9dcXam+WsbU39F5HOneySnpzLpHwBiBiTwEi4igc80Kwrdh7jTAC460vEcGK0/K+K6CwhyY/rgaarE0GZE1yIK2WvCP9K2EmW9nkLgsrAfJIFZBFIrCVgMciC4FjQslXRMWHE4CrQwjHHttzgwE185jqY4OxAcX4Dc1o2OnKtRyoa76i7o1cfZdDFl934+C7nz1paPmybbzCJ344H5PSWjhDje8GJmwbrwyG0IY++ig3MraNV7hsDjRQX6i9+dZ2Zg/KhjtRFZg9W9e9ZQyhVkckngdEPAW2qONwGNIGVyla/07M+rut1ZtGkYpT8ntQQ6/61gCtUQaklVIgLTEnd+ORraqaLguFiwZRKqgqsscmgz02BDan+OLPiezX7eBQNJgD2NqgTPQJNNPoykWDsfHEpPQD6LXEs/mWB71s8Q9FJ5r1VQ5ZQv2Nunf+7q/rjRsPIl+2jVf41BnOh0P6Ps5Q47uBCdvGK4MhtKGPPspN3sbDsvEKl82B9OELtbcllacr9VlHU7e1d+FHRclvTSGSL/yHSH4TEEkQbAnnINy6ABFzEhCRr8Ke23HYFQbGiovGa+8C7SjspbVBqDVBoFVAoBVZ1JosTZcTPseM5YE5T8hCCyHQKuFqKLx3Dd6UqxmKjoeLB3Ao+jWR85pDr/vUaB1Q+xVqmj6hhioBbcaBNvfgs4kHm9CGJFxeS8xSJgf/pvO7B1oOtEnF5S9uLNP1Ou4HlS/bxit86gvnwylzP2eo8d3AhG3jlcEQ2tBHH+VGxrbxiq7NgfTpC935j9ob2mhFT9ecOz635LfmQAG1LkCwQbihXlvCWQi3M4CI66waNR+Y+xDAVPaGSTh6G668HQKtGQJNBYFW/EilMmjPI8SK5kOEj8rNOmiHiyykUN1Di4ZAi6kh/y+NUg9FJ0TDFaPwgi9Q1rdmzNihA2wL9D38pDbxmJt4+HIm67vPdQi9V5/aAcdWD2Uah3zN3n3sKN9y2GzYdz2gmdywZDbfd6INZb5sr/PmU2acD5etbZyhxve12Gyv8x4ModfE66Pc6kUO/Ou82V45Pxi+UHtDG62ga6c/9YKuV2pTHR3XXPJbQfegRgObWh8SqR9K/hS60MJlbc6VZ9w/sBafJQJk+6RAVg2HniWPlJssrzYmQjvh3fW1gFhaNMU6OMtJGlJAzqfJ0PATQY0CmwwOSclFhOB8QBwFRuiRKvi0wV9YoJY8WAsGFNzQhhOLk45czvQuPdWMhHvDpl1620fo+8CWC7upZ84c+EJE1xwbmpNDvl+uOVOJ8np04/7rTGWZvrOjC31/QB3gubo2LDGEfEfqm28HQ+iNyvooNwkivb7OWz++qGtnMbqWUHtC1xaTT9QONdcldc25cxuJJL+V2RdqFNjUaiWPWZQksVmxCUxeu/XTZWu6xklbRDEylXmBWfyHFkTMO3Xk4sJqEmpOysBMZ+naPX2hFovAVqv+P3ycShpe1isLyBUj1/Ah9/0sj1ENyY5SFOAcNJWNkWb7sHFDUB5bKq+5mLK4U9+Lhku+lG/GuuXpBxcfBx4+3HExxt1XqKeHr7lqgT7KTWvbuHxE/bhO9OKL1nNzoK4tJp9zNdclP8/Jb8XcD7W7OocOkdh6mIhfiPlt9LJ4oHwx+t6vSMLb7XB4ql4xJXtqhc5Kfwi1YAS1CnXPDM2pIZjF1lKqQZ/3EpnnyHvRvp0x41X0fCgGatsJwQQTTDCeUJvPArVfiJR3yA0SxM+8ctXMa8kXJh5/zDMKPjCaSL54hEiCiwpxXWqorYarWEv2OCsDtmpBrUYLalAxVT/7LI40etvJcenf3Nz+7wYeaj5CgAQTTDC+UJvBAjUkuDL6diBcPJgMb/lwINb/jxf892XyO7RaGgcXE9BNu3ehlgWhlg+hVq6GWjQ1p4aGn5TM4hp+SHT3mnVw0qQ7f0Wv+cZDbaYQIMEEE4wv1CRQb+gAG9JPUN/2mXcj722DPbXIY5o5NWcrOPy0hFCTRlTAJ/FVQAqhJo1Bqr0r0/jGGwmTPec1TbQDH0yZArqZoXYZSiYESDDBBOsP2AI4QA0wrpKSPTVq+PlSobNV4BYtqMGFATivpgabWqbxDd/HTPacWw+h9h6C2vTpTO9cixQCI5hggg0EbKf4Q40+/CQXClysAjKdLOGcmhpqlVioxUKoNdjZgasQav97/4sk34IyFYIimGCCDQRqDn2Hl/2A2ksFjlYBWRBqBRBq5fCGWx09NQpq3X2h9hPUVCEgggkmmD7ANhPqG97Dz/AOeEtHfR4xP9dUGpjrYQmfKLCEq5+WkVXAMqoaWEYj1dyVSRwWat9AzRECIZhggukTbHZQr0Pd0Qk1tFAQ98bnROjpZU+uL3BfvrNGZBGwy0MSWgQsIyoh1FQU1Gq0oXYjui/UfoFQOwUfcrcXAiCYYIINFtzWQLVDXWeAWi+8reMEkfCXdQ7rT1rN31zm55pQ+qtTfMk0o9W7nSShJWqoRVVhoFb/feJkz2frJtp+c3Xq1GYItZeEChdMMMGGCm4TIcB8iJT3lhLJ7/oQyVcXEckfT3shNffRRRv2BM1MKTvnEl8MrNbuBoTfNkfLkBJny7BSCDOVWnBOTT38vCdxdNXtoKdefKz68cechQoWTDDBHoh5xOws8d5QUP5samHDM+uLTnokl3zpGFMAbELygWVgHhAH7gZi/1wENGfL8HIa0O6HmhQ9JlX9vbC6KZhggj0YM/bJEI8J3AlsI3aDcaF5YHRQLpD55wDJmlw1zOBqp2RtEdRuNdTg7Rzk0BMDNQi8XnicWKhZwQQT7IGYpf92sWhNTq+Ffy4QBewC4gAIsqB8IF5bAMQhEGZwDk0SWgokIUXOkrByZwmcT5NAqKlVfZ/EEZU/mwUViYSaFUwwwR6IiQPyxBBgveK1hSTE1CoGEjh3JgkrAxI43IQwQ3Bzhn87SyIr8UCLrAaj4/f2Lip4lXdPzTat3Xg416NnGPlfJ5SnAZQFlSPHwOonB5VLuOIEG3STBO0RQ2D1kgDTCIEsvAKQvTIEsQgN1Eoh1CpoPbW+EsHbPMYm1d+Zkr7/x5nb2n54goNmbjv4g2tay49jkhrWGdAF6A0FuIpKk0r929sAyg8MDSAUaMHDfr3BOrCn2oo3z3Tov1SBWFygFlwghr2yXhJkERVqRdKABkFFfgbn09RQq8RCDUlMwY2b4LEwHws4xDULLHAxwIZHVycFC5X2dwLUBKj14wczVai/wYJaSJEY9sR67wJMoyia0HfhZc6kdECNn6pJYFqElHzxSFCJtYE3RlZoCVATLkoBagYDtWIItYrePkC7qyq1UK8tDAINiezBVelHCGywh2ixtriICCgcNVKgRv19jfo3+n8Yy5DiCm0oe6UfwxJ6Xj1UT5IRalTZ2mj5XaNfXPBvBXXxqFjy6qSXkerVqqi8NWVA82cKLhelVvkBVT5P3DwhdQ6dOvLKoY7RLpvmMwV1TA+tHnwZ8lRgymfPEEdyPpUt9tT3V2jfdXKZ/9QqaydNnlxjSzuuTet8ejjWOd13DlU39lqfG8ScMgEXBcRiCDUxhJgYgoZREGRiCDRS6G/ccf2QKLQMmK0tNvinDnhArYdqNDnUZz1M6ajvAa3R+NIavDfHMpVSx39IGw5fYYIa5V9zUfpqNdRUbfhoX7jUd9eo81HQgNZD5RlGAzpT/vdBjQ5gKp3m4u3RvjhodUufArg7JcCUF3W8xreK9sNxTXPRa+WpDasr1Oep1LmF0Y5V8I39YEGNa2xpMWyjtRcVrez2POq8E1e/BgC1Egi1yl5W+Awa1FRwPq30v8bBpV4jCGo5mOGGSusXm6nBKTSNU0dZRkE9gTsWA5UeTO+NvHAZ4JeKOY8crV/9HkxPCWj1JPpAjeavTSutJ6b8GhDYYwBmz/CZL0MvhSlGmtiF6Yo3U/3wjL3eh59cY6tjEYIp5po692TIj61+7R8w1Og9NYzgvJcYLhSQQn+zHctHcIVVtLakc1RwqekIgpq3LsjQLnpFf+dOmMDBkp8vUyPElVvTk8H0quy1AJzDZd6IAWps5W/Trh+WIXUYA5DYhrpMoGIq7xVcr4OhfvnEXq9Q4xtbrR8Pb61eViqXuVm+9WvYUIMLBWK4cCCGD67rQyI0nxZSvGeYTPDqE2qdXG4TGcAvN+6iY5M3w/G+NID1YC5ONrFBja38TKBlmydkzaufUNN1boYCtf7EtkdrHvfKsIaa/eZWOf3fZv65JqLwip91Qi2i3FEUlD9ZFJgPnzzI04ssoEyCCsMeYqh54zRIUEtlyVOhNfl/d2hI6w35Mg2tWHzaD3OoXWE5N08Dg5rO2NLi2KYVG+9hBbX1Ry6bzMntWP70ziP1T+88fHZKeutB4tkso7urn9HVk2Ux1b+KWIeJ5VBlM0R+W8Wi5ZtfMF+c9IL5SykDloXP5oXGK3bKHkKoqQY698A0RGPJ774hGgf/d8tINWLt4ag90yQ914uSrQ6YvnsAw8/7huD9aRtDADXOsaX9mCp0nb/BQO3x9S0mL5SdHLu0/KTDM7kd67y2H7rkubWte0ra/l9t1zcCm4Q6YLe+CUzLPLDqFdWZ0c8Xvj7eYWPL6THxe+FQEC4ARKgYhVYo4W0Xs4iH2PQMtTC2BQEuy+JMk9tac12dDAC6hoGgJ0sPKAd3EdJuDWBKr9DRUwtjWSzpYYAo6wWm1dPUB9RUbPDRQ08tpz9QYwAS59iy+AgzWKhJY2sd7FKbu6dmtAKHjc3AJqkOSOENrhYQWEjmYZVAEVtDfueRdfArty0Hbj2W0kC+dcMCwYtJKO3a4l9MgotdBajpB2q0iWjN0rgv7ZaBTi43ztIu/h6t2yl6MPnl0O+dot1GomIZBtLvZ7JnmaTu0Rr+aG5B8Ga7EOhzOQy3tfgy1GGP1rG42xb0ATV7rdsZvLXuQUztJ9QUtHPRxN2Xx8KQinb+9nxiSytnG+18VExzoIYz/AwsmWAaXNprEVYBTMPUENOGFYIbGlLK0UYp0dXqz3BAi4D3kcFnQc2DCjuIwGIzAWp6hZpCq0Gx3jSJ6y1oTfr20EDTiSljj1Z+PTputmUdYlL5XWM4jza2nhqtDjoZyhOGqcMehvLnDPSiYxl+eWIWda5gFla4xj4Mt+ig40fsCo8FAMbYMrS5Tvq8nMFBbZRfvpFp4J4a+NgRBlIasKmAOeq5QbEdJ0KPMAUVAFP/glWEYIMJzPsm1vuTnsfxntqT3Xo4B3u+5eCTln6B0cqvGKL4KJgWVPTlk2c6T7a2wiW2tPoeHvuGmATmz7YI2vMrul0CPSw+IIUUA/OAvAsCdgQzAPAb3POsgg2VLakcZbZmV61FcAE5H9ZvoIWWAHP/vF6T1bleQqUKJkBNsAdqo/x2yMzW5FwlwRahGWJyhBl6JVBoKQRaLjBdle0r1KZgBgK1VD63pAg2As3EZ8sYs5Xbr4oCd8MeW8W9d5jhQKb5bm0RMF+dfdvULytYqEXBBBPMsGxphszslawa81XZQBS0h1zJJOGFXuSoEXpTBoJeSCEwX7MTmPlldZr4bnlWqDzBBBPMcHttyzbONfPdUgqB9b3Fqh3AYnUOsFiTqxYEnvmKbb+YvpL5qqnPpuXE7GAjocYEE0ywYWFGC2PHmT0fOxFCLszk5U0pSKaLk6aZPB9rR8yNMBdqSDDBBDMk+3/seHjH+5u9JQAAAABJRU5ErkJggg=="></a></p>
+			</div>
+			]]>
+    </description>
+
+    <files>
+        <folder>assets</folder>
+        <folder>language</folder>
+        <folder>lib</folder>
+        <folder>models</folder>
+        <folder>skins</folder>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename module="mod_jlplayer2">mod_jlplayer2.php</filename>
+        <filename>mod_jlplayer2.xml</filename>
+        <filename>standalone.php</filename>
+    </files>
+
+    <languages folder="languages">
+        <language tag="en-GB">language/en-GB/en-GB.mod_jlplayer2.ini</language>
+        <language tag="ru-RU">language/ru-RU/ru-RU.mod_jlplayer2.ini</language>
+    </languages>
+
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_jlplayer2/models/fields">
+                <field name="directory" type="directory" directory="music" label="MOD_JLP_DIRECTORY"
+                       description="MOD_JLP_DIRECTORY_DESC" default="music" button="MOD_JLP_BTN_SAVE_DIR"/>
+                <field name="playlist" type="playlist" directory="directory" label="MOD_JLP_BTN_PLAYLIST"
+                       description="MOD_JLP_BTN_PLAYLIST_DESC"/>
+                <field name="customlist" type="textarea" label="MOD_JLP_BTN_CUSTOM_PLAYLIST"
+                       description="MOD_JLP_BTN_CUSTOM_PLAYLIST_DESC"/>
+            </fieldset>
+
+            <fieldset name="tools" label="MOD_JLP_FLSET_TOOLS">
+
+                <field name="width" type="text" default="420px" label="MOD_JLP_PL_WIDTH"
+                       description="MOD_JLP_PL_WIDTH_DESC"/>
+
+                <field name="server_utf8" type="radio" default="0" label="MOD_JLP_PL_UTF8"
+                       description="MOD_JLP_PL_UTF8_DESC">
+                    <option value="0">MOD_JLP_PL_NO</option>
+                    <option value="1">MOD_JLP_PL_YES</option>
+                </field>
+
+                <field name="scroll_track_name" type="radio" default="1" label="MOD_JLP_PL_SCROLL_TRACK_NAME"
+                       description="MOD_JLP_PL_SCROLL_TRACK_NAME_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+
+                <field name="shuffle" type="radio" default="1" label="MOD_JLP_PL_SHUFFLE"
+                       description="MOD_JLP_PL_SHUFFLE_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+
+                <field name="plvisible" type="radio" default="2" label="MOD_JLP_PL_STARTUP_STATUS"
+                       description="MOD_JLP_PL_STARTUP_STATUS_DESC">
+                    <option value="0">MOD_JLP_PL_FOLDED</option>
+                    <option value="1">MOD_JLP_PL_UNFOLDED</option>
+                    <option value="2">MOD_JLP_PL_DEFAULT</option>
+                </field>
+
+                <field name="autoplay" type="radio" default="0" label="MOD_JLP_PL_AUTOPLAY"
+                       description="MOD_JLP_PL_AUTOPLAY_DESC">
+                    <option value="0">MOD_JLP_PL_NO</option>
+                    <option value="1">MOD_JLP_PL_YES</option>
+                </field>
+
+                <field name="onebutton" type="radio" default="0" label="MOD_JLP_PL_ONLY_BUTTON"
+                       description="MOD_JLP_PL_ONLY_BUTTON_DESC">
+                    <option value="0">MOD_JLP_PL_NO</option>
+                    <option value="1">MOD_JLP_PL_YES</option>
+                </field>
+
+                <field name="enablejquery" type="radio" default="1" label="MOD_JLP_PL_ENABLE_JQ"
+                       description="MOD_JLP_PL_ENABLE_JQ_DESC">
+                    <option value="0">MOD_JLP_PL_NO</option>
+                    <option value="1">MOD_JLP_PL_YES</option>
+                </field>
+
+                <field name="jqnoconflict" type="radio" default="1" label="MOD_JLP_PL_JQNOCONFLICT"
+                       description="MOD_JLP_PL_JQNOCONFLICT_DESC">
+                    <option value="0">MOD_JLP_PL_NO</option>
+                    <option value="1">MOD_JLP_PL_YES</option>
+                </field>
+
+                <field name="skin" default="skin-light" directory="modules/mod_jlplayer2/skins" type="skinlist"
+                       label="Select Skin" description="Select Skin"/>
+
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="owncache" type="list" default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
